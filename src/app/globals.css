@@ -3,25 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  background: rgb(6, 10, 20);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(6, 10, 20, 1) 0%,
+    rgba(9, 20, 46, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(6, 10, 20, 1) 0%,
+    rgba(9, 20, 46, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(6, 10, 20, 1) 0%,
+    rgba(9, 20, 46, 1) 100%
+  );
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }

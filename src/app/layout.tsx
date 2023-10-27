@@ -1,8 +1,38 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const uni = localFont({
+  src: [
+    {
+      path: '../../public/fonts/UniNeue-Light.otf',
+      weight: '300'
+    },
+    {
+      path: '../../public/fonts/UniNeue-Book.otf',
+      weight: '400'
+    },
+    {
+      path: '../../public/fonts/UniNeue-Regular.otf',
+      weight: '500'
+    },
+    {
+      path: '../../public/fonts/UniNeue-Bold.otf',
+      weight: '600'
+    },
+    {
+      path: '../../public/fonts/UniNeue-Heavy.otf',
+      weight: '800'
+    },
+    {
+      path: '../../public/fonts/UniNeue-Black.otf',
+      weight: '900'
+    },
+  ],
+  variable: '--font-uni'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${uni.variable} font-sans`}>{children}</body>
     </html>
   )
 }
