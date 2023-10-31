@@ -21,6 +21,10 @@ const config: Config = {
           DEFAULT: '#404040',
           500: '#808080',
         },
+        laci: {
+          koyu: '#080D1A',
+          acik: '09142E',
+        },
       },
     },
   },
